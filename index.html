@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pyramid of Equations</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=EB+Garamond:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <h1>Pyramid of Equations</h1>
+            <div class="game-info">
+                <div class="score">Score: <span id="score">0</span></div>
+                <div class="timer">Time: <span id="timer">10</span>s</div>
+                <div class="round">Round: <span id="round">1</span>/5</div>
+            </div>
+        </header>
+
+        <div class="target-container">
+            <div class="target">Make: <span id="target-value">0</span></div>
+        </div>
+
+        <div class="pyramid-container">
+            <div class="pyramid-row">
+                <div class="tile" id="tile-A" data-id="A" data-value=""></div>
+            </div>
+            <div class="pyramid-row">
+                <div class="tile" id="tile-B" data-id="B" data-value=""></div>
+                <div class="tile" id="tile-C" data-id="C" data-value=""></div>
+            </div>
+            <div class="pyramid-row">
+                <div class="tile" id="tile-D" data-id="D" data-value=""></div>
+                <div class="tile" id="tile-E" data-id="E" data-value=""></div>
+                <div class="tile" id="tile-F" data-id="F" data-value=""></div>
+            </div>
+            <div class="pyramid-row">
+                <div class="tile" id="tile-G" data-id="G" data-value=""></div>
+                <div class="tile" id="tile-H" data-id="H" data-value=""></div>
+                <div class="tile" id="tile-I" data-id="I" data-value=""></div>
+                <div class="tile" id="tile-J" data-id="J" data-value=""></div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="check-btn" class="btn" disabled>Check Answer</button>
+            <button id="reset-btn" class="btn">Reset</button>
+        </div>
+
+        <div class="equation-container">
+            <div class="equation">Your equation: <span id="equation-display"></span></div>
+            <div class="result" id="result-message"></div>
+        </div>
+    </div>
+
+    <audio id="flip-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-game-click-1114.mp3"></audio>
+    <audio id="correct-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-achievement-bell-600.mp3"></audio>
+    <audio id="wrong-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-wrong-answer-fail-notification-946.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
