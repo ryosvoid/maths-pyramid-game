@@ -34,13 +34,3 @@ A brainy yet beautiful game that tests your memory, logic, and math skills.
 
 No installation needed! Just open `index.html` in your browser.
 
-## Customization
-
-- Edit `levels.json` to create predefined levels
-- Adjust timings and game parameters in `script.js`
-- Modify colors and styles in `style.css`
-
-## Credits
-
-- Fonts from Google Fonts
-- Sound effects from Mixkit
