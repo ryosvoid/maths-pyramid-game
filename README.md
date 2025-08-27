@@ -32,5 +32,5 @@ A brainy, beautiful game that tests your memory, logic, and math skills.
 
 ## Installation
 
-No installation needed! Just open `index.html` in your browser.
+No installation needed. Just open `index.html` in your browser.
 
