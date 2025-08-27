@@ -1,12 +1,12 @@
 # Pyramid of Equations
 
-A brainy yet beautiful game that tests your memory, logic, and math skills.
+A brainy, beautiful game that tests your memory, logic, and math skills.
 
 ## How to Play
 
 1. **Memorize Phase (10 seconds)**:
    - Study the pyramid of hexagonal tiles (A to J)
-   - Each tile shows a number or operation (e.g., +5, ×2, -3)
+   - Each tile shows a number or operation (+5, ×2, -3,...)
    - Remember the target number displayed
 
 2. **Solve Phase**:
