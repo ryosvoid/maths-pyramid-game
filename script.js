@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Game state
+    //stat of game yk
     const gameState = {
         score: 0,
         round: 1,
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         timerInterval: null
     };
 
-    // DOM elements
+    //dom elements used for results etc
     const elements = {
         score: document.getElementById('score'),
         timer: document.getElementById('timer'),
@@ -41,11 +41,11 @@ document.addEventListener('DOMContentLoaded', () => {
         wrongSound: document.getElementById('wrong-sound')
     };
 
-    // Initialize and start game automatically
+    //to  intialise the game automatically
     initGame();
     startGame();
 
-    // Event listeners
+    //listeners
     elements.checkBtn.addEventListener('click', checkAnswer);
     elements.resetBtn.addEventListener('click', resetGame);
 
@@ -60,31 +60,31 @@ document.addEventListener('DOMContentLoaded', () => {
     function startGame() {
         if (gameState.isMemorizePhase || gameState.isSolvePhase) return;
         
-        // Reset game state for new round
+        //reset for new rounds
         gameState.selectedTiles = [];
         gameState.currentEquation = [];
         elements.equationDisplay.textContent = '';
         elements.resultMessage.textContent = '';
         elements.resultMessage.className = 'result';
         
-        // Generate random tile values and target
+        //generate randomly 
         generateTileValues();
         generateTargetValue();
         
-        // Show values on tiles
+        //show values
         updateTilesUI(true);
         
-        // Start memorize phase
+        //memorisation phase of the game
         gameState.isMemorizePhase = true;
         gameState.timer = 10;
         updateUI();
         
-        // Disable check button during memorize phase
+        //disable the check button
         elements.checkBtn.disabled = true;
         
-        // Start timer
+        
         startTimer(() => {
-            // Timer ended - flip tiles
+            //when time ends; flip tiles
             flipAllTiles();
             gameState.isMemorizePhase = false;
             gameState.isSolvePhase = true;
@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const operations = ['+', '-', '×', '÷'];
         const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
         
-        // Generate values - ALL tiles will have operations
+        //generate values 
         const values = [];
         
         for (let i = 0; i < 10; i++) {
@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
             values.push(`${op}${num}`);
         }
         
-        // Assign to tiles
+        //asign them to tiles
         let index = 0;
         for (const tileId in gameState.tiles) {
             gameState.tiles[tileId].value = values[index++];
@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function generateTargetValue() {
-        // Random target between -30 and 30
+        //random targets in [-30; 30] interval
         gameState.targetValue = Math.floor(Math.random() * 61) - 30;
         elements.targetValue.textContent = gameState.targetValue;
     }
