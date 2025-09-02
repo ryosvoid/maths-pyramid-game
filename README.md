@@ -29,8 +29,3 @@ A brainy, beautiful game that tests your memory, logic, and math skills.
 - 🧮 Equation evaluation
 - ⭐ Score tracking
 - 📱 Responsive design for all devices
-
-## Installation
-
-No installation needed. Just open `index.html` in your browser.
-
